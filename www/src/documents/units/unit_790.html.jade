@@ -1,0 +1,140 @@
+---cson
+layout: 'deck_units'
+title: "The End Is Near"
+description: "Extremely brief introduction to definite descriptions.  Hints at how sentences such as 'The winner is hungry' might be translated into awFOL."
+tags: ['quantification','translation']
+depends: ['470']
+source: ['ph126 lecture 15']
+duration: 10
+book: ['14.3']
+exercises: ['14.26, 14.28']
+exercises_fast: ['14.2', '14.4, 14.5', '14.10, 14.11', '14.26, 14.28']
+sequence: 1040
+exNormal : [
+  
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))'
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))'
+
+  '/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))'
+      
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near'
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near'
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end'
+  '/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead'
+  '/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead'
+  
+  '/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)'
+  '/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)'
+  '/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)'
+]
+exFast : [
+  '/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))'
+  
+  '/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))'
+    
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near'
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near'
+  '/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end'
+  '/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead'
+  '/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead'
+
+  '/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)'
+  '/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)'
+  '/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)'
+]
+---
+
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_790/slide-133.jpeg'})
+  .notes 
+  .handout ‘The’ can be a quantifier, e.g. ‘the square is broken’.  How to formalise it?
+  .handout The square is broken \\ ⫤⊨ There is exactly one square and it is broken
+  .handout Recall that we can translate `There is exactly one square' as: 
+  .handout  \hspace{5mm} ∃x ( Square(x) ∧ ∀y ( Square(y) → x=y ) )
+  .handout So  `There is exactly one square and it's broken':
+  .handout  \hspace{5mm} ∃x ( Sqr(x) ∧ ∀y ( Sqr(y) → x=y )  ∧ Broken(x) )
+
+
+  .slide
+    p(style='margin-top:150px;') There is an end
+      span.hide.step2 , and all ends are this end
+      span.hide.step4 , and it is near.
+  .slide 
+    p ∃x 
+      span.hide.step3  ( 
+      span End(x) 
+      span.hide.step3  ∧ ∀y ( End(y) → x=y ) 
+      span.hide.step5  ∧ Near(x) 
+      span.hide.step3  ) 
+  +show('.step2')
+  +show('.step3')
+  +invert('.step2, .step3')
+  +uninvert('.step2, .step3')
+  +show('.step4')
+  +show('.step5')
+  +invert('.step4, .step5')
+  +uninvert('.step4, .step5')
+
+//- 
+//- +slide({bkg:'unit_790/slide-134.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-135.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-136.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-137.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-138.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-139.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-140.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-141.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-142.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-143.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-144.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-145.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-146.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-147.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-148.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-149.jpeg'})
+//-   .notes 
+//- 
+//- +slide({bkg:'unit_790/slide-150.jpeg'})
+//-   .notes 
+//- 
++slide({bkg:'unit_790/slide-151.jpeg'})
+  .notes 
+
++slide({bkg:'unit_790/slide-152.jpeg'})
+  .notes 
+

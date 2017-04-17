@@ -1,0 +1,140 @@
+---cson
+layout: 'deck_units' 
+title: "A ∧ B ∨ C: They Are Different"
+description: "Uses two arguments to show that (A ∧ B) ∨ C and A ∧ (B ∨ C) really are different."
+tags: ['truth-tables']
+depends: ['unit_151']
+source: ['ph133 lecture 03']
+duration: 6
+sequence: 310
+exercises_fast: ['3.14, 3.15', '7.2, 7.5, 7.6']
+exercises: ['3.14, 3.15']
+exNormal: [
+  '/ex/scope/qq/(Intelligent(a) and Dissatisfied(a)) or Happy(a)|Intelligent(a) and (Dissatisfied(a) or Happy(a))|(A ∧ B) ∨ C|A ∧ (B ∨ C)|A arrow (B arrow C)|(A arrow B) arrow C'
+  '/ex/tt/qq/(A and B) or C|A and (B or C)'
+  '/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
+  '/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/Happy(a) and (Happy(b) or Happy(c))'
+
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy and frowning; or Ayesha is crying'  
+      
+  '/ex/create/qq/Wide(a)|Tall(b)'
+  '/ex/tt/qq/not (A and B)|not A or not B'
+  '/ex/create/orInconsistent/qq/not (Happy(a) and Wide(a))|not Happy(a) or not Wide(a)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and Wide(a))'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide'  
+  
+  '/ex/create/qq/not (Wide(a) and not Tall(b))'
+  '/ex/tt/qq/not (A and not B)|not A or B'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
+  '/ex/create/orValid/from/not (Happy(a) and not Wide(a))/to/not Happy(a) or Wide(a)'
+  '/ex/create/orValid/from/not Happy(a) or Wide(a)/to/not (Happy(a) and not Wide(a))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy'  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))'  
+]
+exFast: [
+  '/ex/scope/qq/(Intelligent(a) and Dissatisfied(a)) or Happy(a)|Intelligent(a) and (Dissatisfied(a) or Happy(a))|(A ∧ B) ∨ C|A ∧ (B ∨ C)|A arrow (B arrow C)|(A arrow B) arrow C'
+  '/ex/tt/qq/(A and B) or C|A and (B or C)'
+  '/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
+  '/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)'
+  
+  '/ex/create/qq/Wide(a)|Tall(b)'
+  '/ex/create/qq/not (Wide(a) and not Tall(b))'
+  '/ex/tt/qq/not A and B|not (not A or B)'
+  '/ex/create/orValid/from/not Tall(a) and Wide(b)/to/not (not Tall(a) or Wide(b))'
+  '/ex/create/orValid/from/not (not Tall(a) or Wide(b))/to/not Tall(a) and Wide(b)'
+  
+  '/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))'
+  '/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
+  '/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (not Happy(a) or (Sad(b) or not Laughing(c)))'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1|Sad1|Laughing1/sentence/not (Happy(a) and not Sad(b)) or not Laughing(c)'
+]
+---
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_154/slide-128.jpeg'})
+  .notes OK, so we have the truth tables. Where do they differ?
+  //- handout
+  .img.handout(data-src='img/arg1_unit_153.png')
+  .img.handout(data-src='img/arg2_unit_153.png')
+
++slide({bkg:'unit_154/slide-129.jpeg'})
+  .notes The truth-tables differ in rows five and seven only.
+  .notes: :t()
+    So the only difference between these two sentences is the brackets, but 
+    this difference means that the two sentences differ in truth-value.
+
++slide({bkg:'unit_154/slide-130.jpeg'})
+  .notes This also makes a difference to their role in arguments, of course.
+  .notes Which of these arguments is logically valid?
+
++slide({bkg:'unit_154/slide-131.jpeg'})
+  .notes Recall that for an argument to be logically valid is for ...
+
++slide({bkg:'unit_154/slide-132.jpeg'})
+  .notes Now in the case of truth-tables, for an argument to be logically valid amounts to there being no row of the truth-table where the premise is true and the conclusion false.
+
++slide({bkg:'unit_154/slide-133.jpeg'})
+  .notes Consider the first argument.  Is this valid?
+
++slide({bkg:'unit_154/slide-134.jpeg'})
+  .notes Here's the premise and here's the conclusion.
+
++slide({bkg:'unit_154/slide-135.jpeg'})
+  .notes (Let's have some numbers so you can see which lines I'm talking about.)
+
++slide({bkg:'unit_154/slide-136.jpeg'})
+  .notes What happens in line five?  Here we have true premise and false conclusion. 
+
++slide({bkg:'unit_154/slide-137.jpeg'})
+  .notes So the argument is not valid, and this row is a counterexample to the argument.
+  .notes: :t()
+    If someone asks you for a counterexample, what do you have to write?
+    Just this : A false, B true and C true.  That's is: you've specified a possibile situation
+    in which the premises are true and the conclusion false, and that's what a counterexample is.
+
++slide({bkg:'unit_154/slide-138.jpeg'})
+  .notes Now look at argument 2.  Here the premise and conclusion columns are the other way around.
+
++slide({bkg:'unit_154/slide-139.jpeg'})
+  .notes: :t()
+    In the last five rows, the premise is false.  So we can ignore these because 
+    we won't find a true premise AND a false conclusion where the premise is false.'
+  
+
++slide({bkg:'unit_154/slide-140.jpeg'})
+  .notes: :t()
+    What about the top three rows?
+
++slide({bkg:'unit_154/slide-141.jpeg'})
+  .notes     In the top three rows, the premise is true ...
+
++slide({bkg:'unit_154/slide-142.jpeg'})
+  .notes ... but so is the conclusion.
+  .notes So this second argument is clearly logically valid.
+
++slide_middle
+  p.center (A ∧ B) ∨ C 
+  p.center vs
+  p.center A ∧ (B ∨ C)
+  .notes: :t()
+    This ends my discussion of these two sentences.
+    Although they differ only with respect to brackets, they have different truth-tables 
+    and so contribute differently to the validity or not of arguments.
+  .notes: :t()
+    There's a simple message and a complex one.
+    The simple message is that the brackets matter.
+    The complex one is that we have more work to do in explaining our formal language, awFOL.
+    We have more work to do because we haven't yet said what the brackets mean, 
+    although it's clear that they contribute to the meanings of sentences of awFOL.
+    What is the counterpart of a truth-table for brackets?
+    In this course we don't have time to worry about this question; we must leave the meaning
+    of the brackets as something that you get only implicitly.
+    
+

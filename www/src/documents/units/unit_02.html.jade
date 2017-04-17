@@ -1,0 +1,309 @@
+---cson
+layout: 'deck_units' 
+title: "Quick Intro to awFOL"
+description: "Gives some examples of the formal language awFOL and explains their relation to ordinary English.  Also explains terms like 'name' and 'predicate'."
+tags: ['definitions']
+depends: []
+source: ['ph126 lecture 01', 'ppe lecture 01']
+sequence: 40
+book: ['1.1','1.2','1.3']
+exercises: ['1.1--1.5', '*1.6', '1.8--1.10']
+exNormal: [
+  '/ex/TorF/qq/in the sentence ‘John is square or Ayesha is triangular’, the word ‘John’ is a name|in the same sentence, ‘square’ is a predicate|in the same sentence, ‘square’ is a connective|in the same sentence, ‘or’ is a predicate|in the same sentence, ‘or’ is a connective'
+  '/ex/TorF/qq/‘Many more people have been to Paris than you have’ is false|‘Many more people have been to Paris than you have’ is true'
+  '/ex/TorF/qq/‘Ayesha cries’ is an atomic sentence|‘Ayesha cries or Beatrice weeps’ is a non-atomic sentence|‘People come and people go’ is a non-atomic sentence'
+  '/ex/q/What is an atomic sentence?'
+  '/ex/TorF/qq/‘John is square’ is a non-atomic sentence|‘John is square or Ayesha is triangular’ is a non-atomic sentence|‘John is square because Ayesha is triangular’ is a non-atomic sentence|‘Necessarily, John is square’ is a non-atomic sentence'
+  '/ex/create/qq/White(a)'
+  '/ex/create/qq/not White(a)'
+  '/ex/create/qq/not White(a)|Happy(a)'
+  '/ex/create/qq/not White(a)|Happy(a)|Sad(b)'
+  '/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)'
+  '/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(b,a)'
+  '/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(a,b)|SameSize(a,b)'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/White1/sentence/Ayesha is white'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/White1/sentence/Ayesha is not white'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/White1|Happy1/sentence/Ayesha is happy'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is sad'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is not sad'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Beatrice is left of Ayesha'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Ayesha is left of Beatrice'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y/sentence/Ayesha is taller than Beatrice'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y|WiderThan2-x-is-wider-than-y/sentence/Beatrice is wider than Ayesha'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1/sentence/Yellow(a)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Red(b)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Yellow(a) or Red(b)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/Adjacent(a,b)'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/not Adjacent(a,b)'
+]
+exFast: [
+  '/ex/q/define ‘logically valid argument’'
+  '/ex/TorF/qq/in the sentence ‘John is square or Ayesha is triangular’, the word ‘John’ is a name|in the same sentence, ‘square’ is a predicate|in the same sentence, ‘square’ is a connective|in the same sentence, ‘or’ is a predicate|in the same sentence, ‘or’ is a connective'
+  '/ex/TorF/qq/‘John is square’ is a non-atomic sentence|‘John is square or Ayesha is triangular’ is a non-atomic sentence|‘John is square because Ayesha is triangular’ is a non-atomic sentence|‘Necessarily, John is square’ is a non-atomic sentence'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/not (Yellow(a) or Red(b))'
+]
+---
+
+
+
+include ../../../fragments/unit_mixins
+
+section.slide
+  .handout
+  .img.handout(data-src='img/name_predicate_sentence.png')
+  .notes: :t() 
+  .words: .container_12
+    .left-column.grid_8
+      p
+        span.first-example 
+          span.name John
+          span  is  
+          span.predicate square
+      p
+        span.first-example-fol.hide
+          span.predicate Square
+          span (  
+          span.name a
+          span   
+          span )
+      p.em-above
+        span.second-example.hide
+          span.name John
+          span  is 
+          span.predicate to the left of
+          span   
+          span.name Ayesha
+      p
+        span.second-example-fol.hide
+          span.predicate LeftOf
+          span (   
+          span.name a
+          span   
+          span ,
+          span   
+          span.name b
+          span   
+          span  )
+      p.em-above
+        span.third-example.hide
+          span.name John
+          span  is 
+          span.predicate square 
+          span   
+          span.connective or
+          span   
+          span.name Ayesha
+          span  is  
+          span.predicate trinagulra
+      p
+        span.third-example-fol.hide
+          span.predicate Square
+          span (  
+          span.name a
+          span   
+          span )
+          span   
+          span.connective ∨
+          span   
+          span.predicate Trinagulra
+          span (  
+          span.name b
+          span   
+          span )
+    .dfs.right-column.grid_4
+      p
+        span.name.hide name
+        span.name-df.hide  (refers to an object)
+      p
+        span.predicate.hide predicate
+        span.predicate-df.hide  (refers to a property)
+      p
+        span.connective.hide connective
+        span.connective-df.hide  (joins sentences)
+      p
+        span.sentence.hide sentence
+        span.sentence-df.hide  (can be true or false)
+      p
+        span.atomic-sentence.hide atomic sentence
+        span.atomic-sentence-df.hide  (no connectives)
+      p
+        span.non-atomic-sentence.hide non-atomic sentence
+        span.non-atomic-sentence-df.hide  (contains connectives)
+  .notes: :t()
+    Our approach to studying logic will involve a formal language called awFOL.
+    `FOL' stands for first order language, and I call this particular first-order language
+    `awFOL` because, like nearly all first-order languages used in textbooks, it’s awful.
+    (Where are the binary quantifiers?  Why are brackets used with two completely
+    different meanings?  ...)
+  .notes: :t()
+    The language of the textbook is called ‘FOL’.
+    ‘awFOL’ is basically the same as FOL except that you can replace symbols with
+    words which makes typing it easier.
+    Also 'FOL' is a really stupid name  because there are lots of first-order languages.
+    It's a bit like I ask you what language you speak and instead of saying
+    'Farsi' or 'English' or 'Cantonese' you say 'Language, I speak Language'.
+    But this is trivial, it doesn't really matter what you call things.  Let's move on.
+  .notes: :t()
+    As I was saying, for the purposes of logic we are going to use a formal language.
+    In order to get a sense for this language, let's compare it to English.
+    Take a look at this sentence, John is square.
+  
+  //- first example
+  +show_('.sentence')
+  +highlight('.sentence, .first-example', 'blueviolet')
+  .notes: :t()
+    This is a sentence.
+  +show('.sentence-df')
+  .notes: :t()
+    For now a sentence is just something capable of being true or false.
+    (In a longer course we would define what it is to be a sentence more carefully.)
+  +unhighlight_('.first-example', 'blueviolet')
+  +show_('.dfs .name')
+  +highlight_('.first-example .name','pink')
+  +highlight('.dfs .name','pink')
+  .notes In English there are names ...
+  +show('.name-df')
+  .notes ... these are terms that function to refer to objects.
+  +highlight_('.first-example .predicate', 'blue')
+  +show_('.dfs .predicate')
+  +highlight('.dfs .predicate', 'blue')
+  .notes There are also predicates, like 'Square'.
+  +show('.predicate-df')
+  .notes: :t()
+    Predicates are things that refer to properties.
+    In this case the property is that of being square.
+    
+  //- second example
+  +blur2_('.first-example')
+  +show('.second-example')
+  .notes Take a look at this sentence.
+  +highlight('.second-example .predicate', 'blue')
+  .notes: :t()
+    Some properties relate several things; for example, 
+    being 'to the left of' involves two things rather than one.  
+    The expressions for these relational properties are also called predictaes.
+  +highlight('.second-example .name', 'pink')
+  .notes: :t()
+    By the way, this is also a sentence containing multiple names, 'John' and 'Ayesha'.
+
+  //- third example
+  +blur2_('.second-example')
+  +show('.third-example')
+  .notes: :t()
+    Now have a look at this sentence, 'John is square or Ayehsa is triangular' ...
+    or, as I perfer to say, 'trinagulra'.  (Did you spot the mistake?  Well done.)
+  +highlight('.third-example .connective', 'yellow')
+  .notes: :t()
+    Consider the word 'or' in this sentence.  It isn't a name or a predicate.  
+    It doesn't refer to an object, nor to a property.
+  +show_('.dfs .connective, .connective-df')
+  +highlight('.dfs .connective', 'yellow')
+  .notes: :t()
+    Instead its function is to join two sentences, making a new one.  
+    We'll call things like this 'connectives'.
+    A connective is anything that you can combine with zero or more sentences and to make a new sentence.
+
+  //- atomic sentences
+  +show('.non-atomic-sentence, .non-atomic-sentence-df')
+  .notes: :t()
+    Here's another piece of terminology: a sentence with one or more connectives is 'non-atomic'
+  +unblur2_('.first-example, .second-example')
+  +show('.atomic-sentence, .atomic-sentence-df')
+  .notes: :t()
+    And, as you'd expect, a sentence with no connectives is 'atomic'; 
+  
+  //- fol 
+  +fade_('.second-example, .third-example')
+  +blur2('.second-example, .third-example')
+  .notes Now let's see how these sentences look in our formal language, awFOL.
+  +show('.first-example-fol')
+  .notes Here's how the equivalent of 'John is square' looks in awFOL.
+  +highlight('.first-example-fol, .atomic-sentence', 'lime')  
+  .notes The whole thing is a sentence of awFOL.
+  +unhighlight_('.first-example-fol', 'lime')
+  +highlight('.first-example-fol .name', 'pink')
+  .notes The letter 'a' is a name; just like the English name 'John', the function of 'a' is to refer to an object (in this case, John)
+  +highlight('.first-example-fol .predicate', 'blue')
+  .notes And 'Square( )' is the predicate.
+
+  //- fol second example
+  +blur2_('.first-example, .first-example-fol')
+  +fade_('.first-example, .first-example-fol')
+  +unfade_('.second-example')
+  +unblur2('.second-example')
+  .notes What about 'John is to the left of Ayesha', how can we say something like this in awFOL?
+  +show('.second-example-fol')
+  .notes Here's the equivalent of 'John is to the left of Ayesha in awFOL'
+  +highlight('.second-example-fol .name', 'pink')
+  .notes Again, the single letters a and b are names.
+  +highlight('.second-example-fol .predicate', 'blue')
+  .notes: :t()
+    And 'LeftOf( )' is the predicate.
+    Note that, as in English, the order of the names matters.
+    It affects who we are saying is to the left of who.
+  
+  //- fol third example
+  +fade_('.second-example, .second-example-fol')
+  +blur2_('.second-example, .second-example-fol')
+  +unfade_('.third-example')
+  +unblur2('.third-example')
+  .notes Lastly, what is the equivalent of the third sentence in awFOL?
+  +show('.third-example-fol')
+  .notes Much as you would expect.
+  +highlight('.third-example-fol, .non-atomic-sentence', 'orange')
+  .notes This is a non-atomic sentence (because it contains a connective).
+  +unhighlight_('.third-example-fol', 'orange')
+  +highlight('.third-example-fol .connective', 'yellow')
+  .notes: :t()
+    Note that where the English 'or' appears, we use a special symbol.  
+    This symbol doesn't do exactly what the English 'or' does, as we'll see later.
+
+  +unblur2_('.first-example, .first-example-fol, .second-example, .second-example-fol')
+  +unfade('.first-example, .first-example-fol, .second-example, .second-example-fol')
+  .notes Alles klar?  Molto bene.
+  
+  +hide_('span')
+  +show_('.first-example, .first-example span, .first-example-fol, .first-example-fol span')
+  +unhighlight_('.first-example .name, .first-example-fol .name', 'pink')
+  +unhighlight_('.first-example .predicate, .first-example-fol .predicate', 'blue')
+  +highlight-row('.first-example')
+  .notes You might be thinking that this English sentence looks, well, ...
+  +unhighlight-row_('.first-example')
+  +highlight-row('.first-example-fol')
+  .notes: :t()
+    ... a lot like this awFOL sentence.  What's the point of learning a formal language?  
+    How will it help us to understand logic?
+  .notes (It's a bit tricky to answer this question as I haven't yet said what logic is.)
+
+
+
+
+
++slide_middle
+  .handout A formal langauge enables us to avoid ambiguity, e.g.:
+  .notes We need a formal language because ambiguity is awkward to deal with theoretically
+  .handout \begin{quote}
+  p.center.handout.show This is a hospital where doctors are trained.
+  .handout \end{quote}
+
++slide_middle
+  .handout A formal langauge also enables us to some avoid appearance--reality problems:
+  .notes Appearance and reality. We need a formal language because we want a guarantee that a sentence which seems to express a proposition really does express a proposition.
+  .handout \begin{quote}
+  p.center.handout.show Many more people have been to Paris than I have.
+  .handout \end{quote}
+
+//- doesn't know jack
++slide_middle
+  .notes Finally, consider these sentences.  
+  p Ayesha does
+    span.neg n’t 
+    span  know diddly squat about logic
+  p Ayesha does know diddly squat about logic
+  +invert('.neg')
+  .notes: :t()
+     The only difference is an extra negation in the first sentence.
+     Normally you might think that adding a negation changes the meaning, and does so systematically.
+     But this is not true of natural languages like English.
+     We can construct our formal language so that it is true, thereby making our lives simpler 
+     insofar as we are interested in reflecting on inferential relations among sentences.

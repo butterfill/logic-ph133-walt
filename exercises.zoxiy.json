@@ -1,0 +1,1156 @@
+{
+  "courseName": "UK_W20_PH133",
+  "variant": "2016-7",
+  "description": "These exercises are aimed at students taking the logic part of PH133 (Introduction to Philosophy).",
+  "lectures": [
+    {
+      "type": "lecture",
+      "name": "Lecture 1",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_01.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_01.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Quick Intro to awFOL",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_02.html",
+          "rawReading": [
+            "1.1",
+            "1.2",
+            "1.3"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/in the sentence â€˜John is square or Ayesha is triangularâ€™, the word â€˜Johnâ€™ is a name|in the same sentence, â€˜squareâ€™ is a predicate|in the same sentence, â€˜squareâ€™ is a connective|in the same sentence, â€˜orâ€™ is a predicate|in the same sentence, â€˜orâ€™ is a connective",
+            "/ex/TorF/qq/â€˜Many more people have been to Paris than you haveâ€™ is false|â€˜Many more people have been to Paris than you haveâ€™ is true",
+            "/ex/TorF/qq/â€˜Ayesha criesâ€™ is an atomic sentence|â€˜Ayesha cries or Beatrice weepsâ€™ is a non-atomic sentence|â€˜People come and people goâ€™ is a non-atomic sentence",
+            "/ex/q/What is an atomic sentence?",
+            "/ex/TorF/qq/â€˜John is squareâ€™ is a non-atomic sentence|â€˜John is square or Ayesha is triangularâ€™ is a non-atomic sentence|â€˜John is square because Ayesha is triangularâ€™ is a non-atomic sentence|â€˜Necessarily, John is squareâ€™ is a non-atomic sentence",
+            "/ex/create/qq/White(a)",
+            "/ex/create/qq/not White(a)",
+            "/ex/create/qq/not White(a)|Happy(a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(b,a)",
+            "/ex/create/qq/not White(a)|Happy(a)|Sad(b)|LeftOf(b,a)|TallerThan(a,b)|SameSize(a,b)",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/White1/sentence/Ayesha is white",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/White1/sentence/Ayesha is not white",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/White1|Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is sad",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1/sentence/Beatrice is not sad",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Beatrice is left of Ayesha",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y/sentence/Ayesha is left of Beatrice",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y/sentence/Ayesha is taller than Beatrice",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/White1|Happy1|Sad1|LeftOf2-x-is-left-of-y|TallerThan2-x-is-taller-than-y|WiderThan2-x-is-wider-than-y/sentence/Beatrice is wider than Ayesha",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1/sentence/Yellow(a)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Red(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1/sentence/Yellow(a) or Red(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/Adjacent(a,b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Yellow1|Red1|Adjacent2-x-is-adjacent-to-y/sentence/not Adjacent(a,b)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Logically Valid Arguments",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_03.html",
+          "rawReading": [
+            "2.1"
+          ],
+          "rawExercises": [
+            "/ex/TorF/qq/a logically valid argument cannot have a false conclusion|a logically valid argument cannot have false premises",
+            "/ex/TorF/from/Ayesha is a fish|Ayesha cannot swim/to/Ayesha is a fish who cannot swim/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha is a fish|Beatrice is not a fish/to/Ayesha isnâ€™t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/from/Most fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/All fish swim|Ayesha is a fish/to/Ayesha swims/qq/The argument is logically valid",
+            "/ex/TorF/from/If Beatrice is a fish, she can swim|Beatrice is a fish/to/Beatrice can swim/qq/The argument is logically valid",
+            "/ex/TorF/from/If Ayesha is a bird, she can fly|Ayesha can fly/to/Ayesha is a bird/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha can fly|Beatrice can swim/to/Ayesha isnâ€™t Beatrice/qq/The argument is logically valid",
+            "/ex/TorF/from/Ayesha is a big squirrel|All squirrels are animals/to/Ayesha is a big animal/qq/The argument is logically valid",
+            "/ex/TorF/qq/a logically valid argument can have true premises and a true conclusion|a logically valid argument can have true premises and a false conclusion|a logically valid argument can have false premises and a true conclusion|a logically valid argument can have false premises and a false conclusion"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Counterexamples",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_04.html",
+          "rawReading": [
+            "2.5"
+          ],
+          "rawExercises": [
+            "/ex/create/from/TallerThan(a,b)/to/WiderThan(a,b)",
+            "/ex/create/from/Adjacent(a,b)|Adjacent(b,c)/to/Adjacent(a,c)",
+            "/ex/create/from/SameShape(a,b)/to/SameSize(a,b)",
+            "/ex/create/from/SameSize(a,b)/to/SameShape(a,b)",
+            "/ex/TorF/from/Happy(a) or Happy(b)|Happy(a)/to/not Happy(b)/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a) or Happy(b)|Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/Happy(a)/to/not Happy(b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/Happy(a)|not Happy(b)|The possible situation is a counterexample to the argument",
+            "/ex/TorF/from/LargerThan(a,b)/to/not SameShape(a,b)/world/[{\"x\":3,\"y\":0,\"w\":3,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":\",\"-\",\")\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"red\",\"f\":[\":'\",\">\",\"(\"]}]/qq/LargerThan(a,b)|not SameShape(a,b)|The possible situation is a counterexample to the argument",
+            "/ex/q/define â€˜counterexampleâ€™",
+            "/ex/create/from/LeftOf(a,b)|RightOf(b,c)/to/LeftOf(a,c)",
+            "/ex/create/from/LeftOf(a,b)|Adjacent(b,c)/to/LeftOf(a,c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Identity",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_06.html",
+          "rawReading": [
+            "2.2"
+          ],
+          "rawExercises": [
+            "/ex/create/orValid/from/White(a)|a=b/to/White(b)",
+            "/ex/create/orValid/from/a=b|b=c/to/a=c",
+            "/ex/create/orValid/from/LeftOf(a,b)|b=c/to/LeftOf(a,c)",
+            "/ex/create/orValid/from/SameSize(a,b)/to/a=b",
+            "/ex/create/orValid/from/a=b/to/SameSize(a,b)",
+            "/ex/create/orValid/from/SameSize(a,b)|SameShape(a,b)/to/a=b"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Truth Tables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_071.html",
+          "rawReading": [
+            "3.1",
+            "3.2",
+            "3.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/noQ/qq/A and B",
+            "/ex/tt/noQ/qq/A or B",
+            "/ex/tt/noQ/qq/not A",
+            "/ex/TorF/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a)|not Happy(b)|Happy(a) or Happy(b)",
+            "/ex/TorF/world/[{\"x\":9,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\"}:\",\"^\",\"D\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"b\",\"c\":\"pink\",\"f\":[\":'\",\"-\",\"D\"]},{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/Happy(a)|not Happy(b)|not not Happy(a)|not not not Happy(a)|not not not not Happy(a)",
+            "/ex/create/qq/Laughing(c)|Frowning(d)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"c\",\"c\":\"cyan\",\"f\":[\":\",\">\",\"D\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"d\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/Laughing(c)|Frowning(d)|Laughing(c) and Frowning(d)|Laughing(c) or Frowning(d)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"c\",\"c\":\"cyan\",\"f\":[\":\",\">\",\"D\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"d\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/Frowning(d)|not Frowning(d)|Laughing(c) and not Frowning(d)|not (Laughing(c) and not Frowning(d))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Complex Truth Tables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_60.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/noQ/qq/not (A and B)",
+            "/ex/tt/noQ/qq/A and (B or C)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 2",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_02.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_02.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Logical Validity and Truth Tables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_14.html",
+          "rawReading": [
+            "4.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/A or B|not A/to/B",
+            "/ex/tt/from/A or B|B/to/not A",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Happy1|Sad1/sentence/not Happy(a) or not Happy(b)",
+            "/ex/tt/from/not A or not B|A/to/not B",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Happy1|Sad1/sentence/not (Happy(a) or Happy(b))",
+            "/ex/tt/from/not (A or B)/to/not A",
+            "/ex/tt/from/not (A and B)/to/not A",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Laughing1/sentence/Itâ€™s not true that either Ayesha is frowning or Beatrice is laughing",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Laughing1/sentence/Ayesha isnâ€™t frowning or Beatrice isnâ€™t laughing"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Complex Truth Tables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_60.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/noQ/qq/not (A and B)",
+            "/ex/tt/noQ/qq/A and (B or C)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Complex Truth Tables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_09.html",
+          "rawReading": [
+            "3.3",
+            "3.5"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/(A and B) or C",
+            "/ex/tt/qq/A and (B or C)",
+            "/ex/create/qq/(Happy(a) and Happy(b)) or Happy(c)|not (Happy(a) and (Happy(b) or Happy(c)))",
+            "/ex/tt/qq/not (A and B)",
+            "/ex/tt/qq/A|not not A",
+            "/ex/trans/domain/Tobin/names/a=Tobin/predicates/Ugly1/sentence/not not Ugly(a)",
+            "/ex/tt/qq/not (A or B)|not A or not B",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/not (Ugly(a) or Inept(b))",
+            "/ex/tt/qq/not (A or B)|not A and not B",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/Itâ€™s false that Tobin and Suzi are both musicians",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/Itâ€™s false that Tobin is ugly and Suzi inept",
+            "/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musical1/sentence/Suzi isnâ€™t musical and itâ€™s false that Tobin isnâ€™t musical",
+            "/ex/tt/qq/not (not A and not B)|(A and B)",
+            "/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "The Storm Clouds on the Horizon Were Getting Nearly Directly Overhead",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_162.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/from/The storm clouds on the horizon were getting nearly directly overhead/to/those who enter the country illegally violate the law/qq/the argument is valid|the argument is sound",
+            "/ex/TorF/qq/If thereâ€™s no possible situation in which the premises of an argument are all true, it must be logically valid|If there is no possible situation in which the conclusion of an argument is false, it must be logically valid",
+            "/ex/TorF/qq/If thereâ€™s no possible situation in which the premises of an argument are all true, it cannot be logically valid|If thereâ€™s no possible situation in which the premises of an argument are all false, it must be logically valid|If thereâ€™s no possible situation in which the premises of an argument are all false, it cannot be logically valid"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Contradictions, Logical Truths and Logical Validity",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_160.html",
+          "rawReading": [
+            "4.1",
+            "4.2",
+            "5.4"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/A or not A",
+            "/ex/tt/qq/(A or B) or not A",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/Ayesha and Beatrice are both sad or Ayesha is frowning",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/Frowning(b) and (Sad(a) or Frowning(a))",
+            "/ex/tt/qq/(A and B) or not A",
+            "/ex/tt/qq/(A and B) and not A"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 3",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_03.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_03.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Formal Proof: âˆ§Elim and âˆ§Intro",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_21.html",
+          "rawReading": [
+            "5.1",
+            "6.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A and B/to/A",
+            "/ex/proof/from/A|B/to/A and B",
+            "/ex/proof/from/Happy(a) and Sad(b)|Sad(b) and Confused(c)/to/Happy(a) and Confused(c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆ§Intro and âˆ¨Intro: Compare and Contrast",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_212.html",
+          "rawReading": [
+            "6.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A/to/A or B",
+            "/ex/proof/from/A and B/to/B or C",
+            "/ex/proof/from/A|C/to/A and (B or C)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Rules of Proof for Identity",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_110.html",
+          "rawReading": [
+            "2.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Happy(a)|a=b/to/Happy(b)",
+            "/ex/proof/from/LeftOf(a,b)|b=c/to/LeftOf(a,c)",
+            "/ex/proof/from/a=b|b=c/to/a=c",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1/sentence/a=b",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1/sentence/Ayesha isnâ€™t Beatrice",
+            "/ex/proof/from/LeftOf(a,b)|Happy(b)|a=b/to/LeftOf(b,a) and Happy(a)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Logic Makes Me Die Inside",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_161.html",
+          "rawReading": [
+            "2.1"
+          ],
+          "rawExercises": [
+            "/ex/TorF/from/The planet is approximately round/to/I am a biscuit/qq/The argument is logically valid",
+            "/ex/TorF/from/not a=a/to/B/qq/The argument is logically valid|There is a possible situation in which the premises are true|There is a possible situation in which the argument is sound",
+            "/ex/TorF/from/A and not A/to/B and not B/qq/The argument is logically valid",
+            "/ex/tt/from/A and not A/to/B",
+            "/ex/tt/from/B/to/A or not A"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Â¬, âŠ¥",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_270.html",
+          "rawReading": [
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/false/to/A",
+            "/ex/proof/from/false/to/A",
+            "/ex/tt/from/A|not A/to/false",
+            "/ex/proof/from/Tall(a) and not Tall(a)/to/false",
+            "/ex/proof/from/Tall(a)|not Tall(b)|a=b/to/false",
+            "/ex/create/orInconsistent/qq/Tall(a)|not Tall(b)|a=b",
+            "/ex/proof/from/Tall(a) or Happy(a)|not (Tall(a) or Happy(a))/to/Tall(a) and Happy(a)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "A âˆ§ B âˆ¨ C: They Are Different",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_154.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/(Intelligent(a) and Dissatisfied(a)) or Happy(a)|Intelligent(a) and (Dissatisfied(a) or Happy(a))|(A âˆ§ B) âˆ¨ C|A âˆ§ (B âˆ¨ C)|A arrow (B arrow C)|(A arrow B) arrow C",
+            "/ex/tt/qq/(A and B) or C|A and (B or C)",
+            "/ex/create/orValid/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))",
+            "/ex/create/orValid/from/Happy(a) and (Happy(b) or Happy(c))/to/(Happy(a) and Happy(b)) or Happy(c)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/(Happy(a) and Happy(b)) or Happy(c)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice|c=Caitlyn/predicates/Happy1/sentence/Happy(a) and (Happy(b) or Happy(c))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy; and she is frowning or crying",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Frowning1|Crying1/sentence/Ayesha is happy and frowning; or Ayesha is crying",
+            "/ex/create/qq/Wide(a)|Tall(b)",
+            "/ex/tt/qq/not (A and B)|not A or not B",
+            "/ex/create/orInconsistent/qq/not (Happy(a) and Wide(a))|not Happy(a) or not Wide(a)",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and Wide(a))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/Ayesha is not happy or not wide",
+            "/ex/create/qq/not (Wide(a) and not Tall(b))",
+            "/ex/tt/qq/not (A and not B)|not A or B",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))",
+            "/ex/create/orValid/from/not (Happy(a) and not Wide(a))/to/not Happy(a) or Wide(a)",
+            "/ex/create/orValid/from/not Happy(a) or Wide(a)/to/not (Happy(a) and not Wide(a))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Sad1|Happy1/sentence/Ayesha is sad or not happy",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1|Wide1/sentence/not (Happy(a) and not Wide(a))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Formal Proof",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_111.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/a=b/to/b=a",
+            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 4",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_04.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_04.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Everything Is Broken",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_471.html",
+          "rawReading": [
+            "9.1",
+            "9.2"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Happy1/sentence/Ayesha is happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Someone is happy",
+            "/ex/trans/domain/people/names/-/predicates/Happy1/sentence/Everyone is happy",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/exists x Broken(x)",
+            "/ex/create/qq/exists x Happy(x)",
+            "/ex/create/qq/all x Happy(x)",
+            "/ex/create/qq/not all x Happy(x)",
+            "/ex/create/qq/exists x Happy(x)|not all x Happy(x)",
+            "/ex/trans/domain/people/names/-/predicates/Broken1/sentence/all x Broken(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "What does âˆƒ mean?",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_491.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/exists x Tall(x)|all x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|all x Tall(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Formal Proof",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_111.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/from/a=b/to/b=a",
+            "/ex/proof/from/LeftOf(a,b)|c=b/to/LeftOf(a,c)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "â†’Intro, â†’Elim",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_390.html",
+          "rawReading": [
+            "8.1",
+            "8.2"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/Happy(a)|Happy(a) arrow Happy(b)",
+            "/ex/proof/from/A and C|A arrow B/to/B",
+            "/ex/proof/from/A arrow B|B arrow C/to/A arrow C",
+            "/ex/proof/from/-/to/A arrow A",
+            "/ex/proof/from/A|A arrow false/to/B",
+            "/ex/proof/from/A arrow not A|A/to/false"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Subproofs with zoxiy",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_395.html",
+          "rawReading": [
+            "8.1",
+            "8.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A arrow B|B arrow C/to/A arrow C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆ¨Elim: An Example",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_221.html",
+          "rawReading": [
+            "5.2",
+            "6.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A or B/to/B or A",
+            "/ex/proof/orInvalid/from/A or B|not A/to/B",
+            "/ex/proof/orInvalid/from/A or B|A/to/not B",
+            "/ex/proof/orInvalid/from/A and B|not A/to/B",
+            "/ex/proof/orInvalid/from/A and (B or C)/to/(A and C) or (A and B)",
+            "/ex/proof/orInvalid/from/(A and B) or (C and D)/to/B or C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆ¨Elim and Soundness",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_226.html",
+          "rawReading": [
+            "5.2",
+            "6.2"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/A or B/to/B",
+            "/ex/tt/from/A or B|A arrow C|B arrow C/to/C"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 5",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_05.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_05.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Not Or",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_603.html",
+          "rawReading": [
+            "3.7"
+          ],
+          "rawExercises": [
+            "/ex/scope/qq/Â¬(A âˆ¨ B)|Â¬A âˆ¨ Â¬B|Â¬A and Â¬B|Â¬(A arrow B)",
+            "/ex/create/qq/Frowning(a)",
+            "/ex/create/qq/Frowning(a)|Sad(a)",
+            "/ex/tt/qq/not A or not B|not (A or B)",
+            "/ex/create/orValid/from/not Frowning(a) or not Sad(b)/to/not (Frowning(a) or Sad(b))",
+            "/ex/create/orValid/from/not (Frowning(a) or Sad(b))/to/not Frowning(a) or not Sad(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/not Frowning(a) or not Sad(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Sad1/sentence/not (Frowning(a) or Sad(b))",
+            "/ex/tt/qq/not A and not B|not (A and B)",
+            "/ex/create/qq/not (not Wide(a) or Tall(b))",
+            "/ex/tt/qq/not A and B|not (not A or B)",
+            "/ex/create/orValid/from/not Tall(a) and Wide(b)/to/not (not Tall(a) or Wide(b))",
+            "/ex/create/orValid/from/not (not Tall(a) or Wide(b))/to/not Tall(a) and Wide(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Tall1|Wide1/sentence/not Tall(a) and Wide(b)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Tall1|Wide1/sentence/not (not Tall(a) or Wide(b))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "What does â€˜â†’â€™ mean?",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_700.html",
+          "rawReading": [
+            "7.1"
+          ],
+          "rawExercises": [
+            "/ex/tt/from/not A/to/A arrow B",
+            "/ex/proof/from/not A/to/A arrow B",
+            "/ex/tt/from/A arrow B|B/to/A",
+            "/ex/tt/from/A arrow B|not B/to/not A",
+            "/ex/tt/from/(A or C) arrow B|not B/to/not A",
+            "/ex/tt/from/(A and C) arrow B|not B/to/not A",
+            "/ex/tt/from/A arrow B/to/A arrow (B and C)",
+            "/ex/tt/from/A arrow B/to/A arrow (B or C)",
+            "/ex/proof/from/A or B|A arrow C/to/C or B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "I Met a Philosopher",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_501.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"indigo\",\"f\":[\";\",\">\",\"(\"]}]/qq/all x (Frowning(x) arrow Happy(x))",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"indigo\",\"f\":[\";\",\">\",\")\"]}]/qq/all x (Frowning(x) arrow Happy(x))",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"indigo\",\"f\":[\";\",\">\",\")\"]}]/qq/all x (Frowning(x) arrow Happy(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Circle1|Broken1/sentence/All circles are broken",
+            "/ex/trans/domain/5things/names/-/predicates/Idol1-x-is-an-idol|Dead1/sentence/âˆ€x(Idol(x) â†’ Dead(x))",
+            "/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad",
+            "/ex/trans/domain/people/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/âˆ€x(Fish(x) â†’ CanSwim(x))",
+            "/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad",
+            "/ex/trans/domain/people/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying",
+            "/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))",
+            "/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying",
+            "/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "All Squares Are Blue",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_503.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/Red1|Happy1/sentence/exists x (Happy(x) and Red(x))",
+            "/ex/create/qq/exists x (Happy(x) and Yellow(x))|exists x (Happy(x) and Red(x))",
+            "/ex/create/qq/all x (Yellow(x) arrow Happy(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"red\",\"f\":[\":\",\">\",\")\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\">\",\")\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\">\",\"(\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"red\",\"f\":[\":\",\"-\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"red\",\"f\":[\":\",\">\",\")\"]}]/qq/exists x (Happy(x) and Red(x))|all x (Happy(x) arrow Red(x))",
+            "/ex/trans/domain/people/names/-/predicates/Yellow1|Happy1/sentence/all x (Yellow(x) arrow Happy(x))",
+            "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))",
+            "/ex/create/qq/all x (Yellow(x) arrow Happy(x))|all x (Red(x) arrow Sad(x))|exists x (not Happy(x) and not Sad(x))",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Happy1/sentence/Someone is neither happy nor sad"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "What does âˆ€ mean?",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_492.html",
+          "rawReading": [
+            "9.4"
+          ],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\">\",\")\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/TorF/world/[{\"x\":3,\"y\":0,\"w\":2,\"h\":3,\"n\":\"a\",\"c\":\"white\",\"f\":[\":'\",\"-\",\"|\"]},{\"x\":5,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\"-\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x Happy(x)|all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Vegetarians Are Evil",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_502.html",
+          "rawReading": [
+            "9.2",
+            "9.3",
+            "9.5"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/Happy(a)|Sad(b)|all x (Sad(x) arrow Above(x,a))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Sad1|Crying1/sentence/all x (Sad(x) arrow Crying(x))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Crying1/sentence/all x (Happy(x) arrow not Crying(x))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Happy1|Vegetarian1/sentence/Everything happy is vegetarian",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Psychadelic1|Vegetarian1/sentence/Everything vegetarian is psychadelic",
+            "/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x ((Sad(x) and Tall(x)) arrow Above(x,b))",
+            "/ex/create/qq/Sad(a)|Tall(a)|Happy(b)|Sad(c)|not a=c|all x (Sad(x) arrow (Above(x,b) and Tall(x)))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Psychadelic1|Vegetarian1|Loves2/sentence/All psychadelic vegetarians love Ayesha",
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Counterexamples with Quantifiers",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_502b.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/create/qq/all x Tall(x)|not (all x Sad(x))",
+            "/ex/create/from/all x Tall(x)/to/all x Sad(x)",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))/to/all x (Sad(x) arrow Tall(x))",
+            "/ex/create/qq/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x Sad(x)|exists x Crying(x)|all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))|not all x (Crying(x) arrow Tall(x))",
+            "/ex/create/from/all x (Tall(x) arrow Sad(x))|all x (Sad(x) arrow Crying(x))/to/all x (Crying(x) arrow Tall(x))"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "We knew that it was invalid ...",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_163.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/from/A and B|not A/to/C",
+            "/ex/proof/from/A and B|not A/to/C"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Not If",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_604.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/scope/qq/Â¬(A â†’ B)|A â†’ Â¬B",
+            "/ex/tt/from/Â¬(A â†’ B)/to/not B",
+            "/ex/proof/orInvalid/from/Â¬(A â†’ B)/to/not B",
+            "/ex/tt/from/(A â†’ Â¬B)/to/not B",
+            "/ex/proof/orInvalid/from/(A â†’ Â¬B)/to/not B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "â†” : truth tables and rules",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_567.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/qq/A â†” B",
+            "/ex/tt/from/A â†” B/to/A arrow B",
+            "/ex/tt/qq/(A arrow B) â†” not (A and not B)",
+            "/ex/proof/from/A â†” B/to/B arrow A",
+            "/ex/proof/from/(not A or B)|(B arrow A)/to/A â†” B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Translation with Quantifiers",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_507.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x (Tall(x) and Sad(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x) and Red(x))",
+            "/ex/create/qq/Tall(a)|exists x LeftOf(x,a)",
+            "/ex/create/qq/Tall(a)|exists x (Tall(x) and LeftOf(x,a))",
+            "/ex/create/qq/Tall(a)|exists x Laughing(x)|exists x (Laughing(x) and Tall(x) and LeftOf(x,a))",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken",
+            "/ex/create/qq/some x Tall(x)|all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/some x (Tall(x) and Sad(x))|some x (Tall(x) and not Sad(x))",
+            "/ex/create/qq/some x Tall(x)|not all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/exists x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))",
+            "/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 6",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_06.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_06.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "DeMorgan: Â¬(A âˆ§ B) â«¤âŠ¨ Â¬A âˆ¨ Â¬B",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_235.html",
+          "rawReading": [
+            "3.6",
+            "4.2"
+          ],
+          "rawExercises": [
+            "/ex/tt/qq/not (A and not B) or not C|not (not A or (B or not C))",
+            "/ex/create/orValid/from/not (Happy(a) and not Sad(b)) or not Laughing(c)/to/not (not Happy(a) or (Sad(b) or not Laughing(c)))",
+            "/ex/create/orValid/from/not (not Happy(a) or (Sad(b) or not Laughing(c)))/to/not (Happy(a) and not Sad(b)) or not Laughing(c)",
+            "/ex/scope/qq/Â¬(A âˆ§ B)|Â¬A âˆ¨ Â¬B|Â¬A âˆ§ Â¬B|Â¬(A âˆ¨ B)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "â†” : truth tables and rules",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_567.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/tt/qq/A â†” B",
+            "/ex/tt/from/A â†” B/to/A arrow B",
+            "/ex/tt/qq/(A arrow B) â†” not (A and not B)",
+            "/ex/proof/from/A â†” B/to/B arrow A",
+            "/ex/proof/from/(not A or B)|(B arrow A)/to/A â†” B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Don't use âˆƒ with â†’",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_245.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/world/[{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"white\",\"f\":[\":\",\"^\",\"|\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":'\",\"-\",\"(\"]}]/qq/all x (Sad(x) arrow Crying(x))|all x (Sad(x) and Crying(x))",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everything is sad and crying.",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Everything sad is crying.",
+            "/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))",
+            "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\":\",\">\",\"|\"]}]/qq/exists x (Sad(x) and Crying(x))|all x (Sad(x) arrow Crying(x))",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is sad and crying.",
+            "/ex/trans/domain/people/names/-/predicates/Sad1|Crying1/sentence/Something is not sad or is crying.",
+            "/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))",
+            "/ex/create/qq/exists x LeftOf(x,a)",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))",
+            "/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))",
+            "/ex/create/qq/exists x RightOf(x,a)",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))",
+            "/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Â¬Intro",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_281.html",
+          "rawReading": [
+            "5.3",
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/A/to/not not A",
+            "/ex/proof/from/A arrow B|not B/to/not A",
+            "/ex/proof/from/not A/to/not (A and B)",
+            "/ex/proof/from/not (A and B)|A/to/not B",
+            "/ex/proof/from/not (A arrow B)/to/A",
+            "/ex/proof/from/not (A arrow B)/to/not B"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Â¬Intro Proof Example",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_283.html",
+          "rawReading": [
+            "5.3",
+            "6.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Aâ†’B|Â¬B/to/Â¬A",
+            "/ex/proof/from/Â¬A or Â¬B/to/Â¬(A and B)",
+            "/ex/proof/from/A|Â¬B/to/Â¬(Aâ†’B)",
+            "/ex/proof/from/A/to/Â¬(Aâ†’Â¬A)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Subproofs Are Tricky",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_224.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/A or B/to/B or A",
+            "/ex/proof/orInvalid/from/A or B/to/B and A",
+            "/ex/TorF/qq/If an argument is valid it remains valid when you add a new sentence to the premises, regardless of what that new sentence is.|No valid argument may have a contradiction as its conclusion.|An invalid argument can be turned into a valid argument by replacing the conclusion with its negation"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆ€Elim",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_800.html",
+          "rawReading": [
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/all x Red(x)/to/Red(a)",
+            "/ex/proof/from/all x (Tall(x) arrow Happy(x))|Tall(a)/to/Happy(a)",
+            "/ex/proof/from/all x (Tall(x) arrow Happy(x))|all x (Happy(x) arrow Broken(x))|Tall(a)/to/Broken(a)",
+            "/ex/proof/from/all x a=x|Red(a)/to/Red(b)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 7",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_07.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_07.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "Watch Out, Here Come Multiple Quantifiers",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_744.html",
+          "rawReading": [
+            "11.1"
+          ],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Something is broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/All Ayeshaâ€™s things are broken",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/BelongsTo2-x-belongs-to-y|Broken1/sentence/Something of Ayeshaâ€™s is broken"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Something Is Above Something",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_740.html",
+          "rawReading": [
+            "11.1"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/TallerThan(a,b)",
+            "/ex/create/qq/exists y TallerThan(a,y)",
+            "/ex/create/qq/exists x exists y TallerThan(x,y)",
+            "/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/TallerThan2-x-is-taller-than-y/sentence/TallerThan(a,b)",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/TallerThan2-x-is-taller-than-y/sentence/exists x TallerThan(a,x)",
+            "/ex/trans/domain/people/names/-/predicates/TallerThan2-x-is-taller-than-y/sentence/exists y exists x TallerThan(y,x)",
+            "/ex/create/qq/exists x exists y LeftOf(x,y)|all x all y (LeftOf(x,y) arrow Happy(x))|exists x not Happy(x)",
+            "/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)",
+            "/ex/create/qq/exists x exists y Adjacent(x,y)|exists x exists y not Adjacent(x,y)|all x all y ((Adjacent(x,y) and Sad(x)) arrow Sad(y))|exists x Sad(x)|exists x not Sad(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "There Is Exactly One",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_625.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is one and only one survivor",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one female survivor",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one survivor and she is female",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
+            "/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))",
+            "/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))",
+            "/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
+            "/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
+            "/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))",
+            "/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆƒIntro",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_801.html",
+          "rawReading": [
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/Tall(a)/to/exists x Tall(x)",
+            "/ex/proof/from/Tall(a)|Red(a)/to/exists x (Tall(x) and Red(x))",
+            "/ex/proof/from/Tall(a)|Red(b)/to/exists x Tall(x) and exists x Red(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆƒElim",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_550.html",
+          "rawReading": [
+            "12.2",
+            "13.2"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/âˆƒx( Blue(x) âˆ§ Tall(x) )/to/âˆƒx Blue(x)",
+            "/ex/proof/from/all x ( Blue(x) arrow Tall(x) )|âˆƒx Blue(x)/to/âˆƒx Tall(x)",
+            "/ex/proof/from/all x not Blue(x)/to/not exists x Blue(x)",
+            "/ex/proof/from/all x ( Scary(x) or Funny(x) )|âˆƒx not Scary(x)/to/âˆƒx Funny(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Translation with Quantifiers",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_507.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x (Tall(x) and Sad(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))",
+            "/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x) and Red(x))",
+            "/ex/create/qq/Tall(a)|exists x LeftOf(x,a)",
+            "/ex/create/qq/Tall(a)|exists x (Tall(x) and LeftOf(x,a))",
+            "/ex/create/qq/Tall(a)|exists x Laughing(x)|exists x (Laughing(x) and Tall(x) and LeftOf(x,a))",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying",
+            "/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken",
+            "/ex/create/qq/some x Tall(x)|all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/some x (Tall(x) and Sad(x))|some x (Tall(x) and not Sad(x))",
+            "/ex/create/qq/some x Tall(x)|not all x (Tall(x) arrow Sad(x))",
+            "/ex/create/qq/exists x Tall(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))",
+            "/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))",
+            "/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying",
+            "/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Scope and Quantifiers",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_710.html",
+          "rawReading": [
+            "9.5",
+            "9.6"
+          ],
+          "rawExercises": [
+            "/ex/scope/qq/âˆƒx(Robots(x) âˆ§ Intelligent(x))|âˆƒx Robots(x) âˆ§ âˆƒx Intelligent(x)|all x Tragic(x) arrow all x Comic(x)|all x (Tragic(x) arrow Comic(x))|all x ((Tragic(x) or Comic(x)) arrow Dramatic(x))",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\"}:\",\"-\",\"|\"]}]/qq/exists x (Happy(x) and Tall(x))|exists x Tall(x) and exists x Happy(x)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\">\",\"(\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
+            "/ex/TorF/world/[{\"x\":4,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"green\",\"f\":[\"}:\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"blue\",\"f\":[\":\",\"-\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"orange\",\"f\":[\"}:\",\"^\",\")\"]}]/qq/all x (Tall(x) arrow Happy(x))|all x Tall(x) arrow all x Happy(x)",
+            "/ex/create/qq/exists x White(x) and exists x Sad(x)|not exists x (White(x) and Sad(x))",
+            "/ex/create/qq/all x White(x) arrow all x Sad(x)|not all x (White(x) arrow Sad(x))",
+            "/ex/create/orValid/from/exists x Tall(x) and exists x Happy(x)/to/exists x Tall(x) and exists y Happy(y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "âˆ€Intro",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_570.html",
+          "rawReading": [
+            "12.1",
+            "12.3",
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/âˆ€x(Frowning(x) and Crying(x))/to/âˆ€x Crying(x)",
+            "/ex/proof/from/âˆ€x(Square(x) â†’ Blue(x))/to/âˆ€x Square(x) â†’ âˆ€x Blue(x)",
+            "/ex/proof/from/âˆ€x(Sad(x) â†’ Tall(x))|âˆ€x(Tall(x) â†’ Blue(x))/to/âˆ€x (Sad(x) â†’ Blue(x))",
+            "/ex/proof/from/âˆ€x(Sad(x) â†’ Tall(x))|âˆ€x(Sad(x) â†’ not Tall(x))/to/âˆ€x not Sad(x)",
+            "/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/âˆ€x Happy(x) â†’ âˆ€x Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Two Things Are Broken",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_470.html",
+          "rawReading": [
+            "14.1"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))",
+            "/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)",
+            "/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)",
+            "/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)|all x (exists y Below(x,y) arrow Sad(x))",
+            "/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y))/to/exists x exists y (Happy(x) and Happy(y) and not x=y)",
+            "/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y) and not x=y)/to/exists x exists y (Happy(x) and Happy(y))",
+            "/ex/trans/domain/people/names/-/predicates/Crying1/sentence/Something is crying",
+            "/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are crying",
+            "/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y (Sad(x) and Sad(y) and not x=y)",
+            "/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y exists z (Sad(x) and Sad(y) and Sad(z) and not x=y and not y=z and not x=z)",
+            "/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are not crying",
+            "/ex/trans/domain/people/names/-/predicates/Crying1/sentence/It is not true that at least two things are crying",
+            "/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At most one thing is crying"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "lecture",
+      "name": "Lecture 8",
+      "slides": "https://logic-ph133.zoxiy.xyz/short_lecture_08.html",
+      "handout": "https://logic-ph133.zoxiy.xyz/handouts/short_lecture_08.handout.pdf",
+      "units": [
+        {
+          "type": "unit",
+          "name": "âˆ€Intro",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_570.html",
+          "rawReading": [
+            "12.1",
+            "12.3",
+            "13.1"
+          ],
+          "rawExercises": [
+            "/ex/proof/from/âˆ€x(Frowning(x) and Crying(x))/to/âˆ€x Crying(x)",
+            "/ex/proof/from/âˆ€x(Square(x) â†’ Blue(x))/to/âˆ€x Square(x) â†’ âˆ€x Blue(x)",
+            "/ex/proof/from/âˆ€x(Sad(x) â†’ Tall(x))|âˆ€x(Tall(x) â†’ Blue(x))/to/âˆ€x (Sad(x) â†’ Blue(x))",
+            "/ex/proof/from/âˆ€x(Sad(x) â†’ Tall(x))|âˆ€x(Sad(x) â†’ not Tall(x))/to/âˆ€x not Sad(x)",
+            "/ex/proof/from/not exists x (Happy(x) and not Blue(x))/to/âˆ€x Happy(x) â†’ âˆ€x Blue(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "There Is a Store for Everything",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_560.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/LeftOf(a,b)",
+            "/ex/create/qq/exists y LeftOf(a,y)",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/LeftOf2/sentence/exists y LeftOf(a,y)",
+            "/ex/create/qq/exists x exists y LeftOf(x,y)",
+            "/ex/trans/domain/things/names/-/predicates/LeftOf2-x-is-left-of-y/sentence/exists x exists y LeftOf(x,y)",
+            "/ex/create/qq/exists x exists y (Happy(x) and LeftOf(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|LeftOf2-x-is-left-of-y/sentence/exists x exists y (Happy(x) and LeftOf(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Sad1|Above2-x-is-above-of-y/sentence/Something is above a sad thing.",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1|DifferentSize2-xâ€™s-size-differs-from-yâ€™s-size/sentence/exists x exists y (Happy(x) and Sad(y) and DifferentSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Bigger2-x-is-bigger-than-y/sentence/Some things are bigger than others",
+            "/ex/create/qq/DifferentSize(a,b)",
+            "/ex/create/qq/exists y DifferentSize(a,y)",
+            "/ex/trans/domain/things/names/a=Ayesha/predicates/DifferentSize2-xâ€™s-size-differs-from-yâ€™s-size/sentence/exists y DifferentSize(a,y)",
+            "/ex/create/qq/exists x exists y (DifferentSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/DifferentSize2-xâ€™s-size-differs-from-yâ€™s-size/sentence/Some things differ in size.",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/DifferentSize2-xâ€™s-size-differs-from-yâ€™s-size/sentence/all x exists y (DifferentSize(x,y))",
+            "/ex/create/qq/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/DifferentSize2-xâ€™s-size-differs-from-yâ€™s-size|SameShape2-x-and-y-have-the-same-shape/sentence/all x exists y (DifferentSize(x,y) and SameShape(x,y))",
+            "/ex/create/qq/exists x exists y (DifferentSize(x,y))|all x all y (DifferentSize(x,y) arrow SameShape(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/DifferentShape2-xâ€™s-shape-differs-from-yâ€™s-shape|SameSize2-x-has-the-same-size-as-y/sentence/All things that differ in shape have the same size.",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1|Sad1/sentence/exists x exists y (Happy(x) and Sad(y))",
+            "/ex/create/qq/exists x exists y (DifferentSize(x,y) and Happy(x) and Sad(y))",
+            "/ex/create/qq/exists x exists y (DifferentSize(x,y) and Happy(x) and Sad(y))|all x all y ((Happy(x) and Sad(y)) arrow LeftOf(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/Happy1/sentence/Some are happy and some are not.",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (SameSize(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/SameSize2-x-is-the-same-size-as-y/sentence/all x all y (SameSize(x,y))",
+            "/ex/create/qq/exists x exists y (Happy(x) and Sad(y))|all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/trans/domain/5things/names/-/predicates/DifferentShape2-xâ€™s-shape-differs-from-yâ€™s-shape/sentence/all x all y (not x=y arrow DifferentShape(x,y))",
+            "/ex/TorF/world/[{\"x\":5,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\"}:\",\"^\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"pink\",\"f\":[\":\",\"^\",\"|\"]},{\"x\":7,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"purple\",\"f\":[\";\",\"-\",\"(\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"green\",\"f\":[\":\",\"-\",\"(\"]}]/qq/all x exists y SameSize(x,y)|exists y all x SameSize(x,y)",
+            "/ex/TorF/world/[{\"x\":0,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"pink\",\"f\":[\":\",\"-\",\")\"]},{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"white\",\"f\":[\";\",\"^\",\"()\"]}]/qq/all x exists y SameSize(x,y)|exists y all x SameSize(x,y)",
+            "/ex/TorF/world/[{\"x\":2,\"y\":0,\"w\":2,\"h\":2,\"n\":\"\",\"c\":\"yellow\",\"f\":[\"}:\",\"^\",\")\"]},{\"x\":0,\"y\":0,\"w\":2,\"h\":3,\"n\":\"\",\"c\":\"pink\",\"f\":[\":\",\"^\",\"|\"]}]/qq/all x exists y SameSize(x,y)|exists y all x SameSize(x,y)",
+            "/ex/create/from/all x exists y SameSize(x,y)/to/exists y all x SameSize(x,y)",
+            "/ex/TorF/qq/â€˜Give me a noteâ€™ exemplifies lexical ambiguity|â€˜Give me a noteâ€™ exemplifies structural ambiguity|â€˜I shot an elephant in my pyjamasâ€™ exemplifies lexical ambiguity|â€˜I shot an elephant in my pyjamasâ€™ exemplifies structural ambiguity|â€˜There is a store for everythingâ€™ exemplifies structural ambiguity",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/exists y all x StoreFor(y,x)",
+            "/ex/trans/domain/9things/names/-/predicates/StoreFor2-x-is-a-store-for-y/sentence/all y exists x StoreFor(x,y)",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/-/predicates/Ancestor2-x-is-yâ€™s-ancestor/sentence/Everyone has an ancestor",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-yâ€™s-ancestor/sentence/Ayesha is an ancestor of everyone except herself.",
+            "/ex/trans/domain/Ayesha|Beatrice|Caitlyn|Daisuke|Eugine/names/a=Ayesha/predicates/Ancestor2-x-is-yâ€™s-ancestor/sentence/Someone is an ancestor of everyone except herself."
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Variables",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_600.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/TorF/qq/â€˜Some x is a horse and x is deadâ€™ is a correct English translation of âˆƒx(Horse(x) âˆ§ Dead(x))",
+            "/ex/TorF/qq/â€˜A horse is deadâ€™ is a correct English translation of âˆƒx(Horse(x) âˆ§ Dead(x))",
+            "/ex/TorF/qq/â€˜All xâ€™s are deadâ€™ is a correct English translation of âˆ€x Dead(x)",
+            "/ex/TorF/qq/â€˜Everything is deadâ€™ is a correct English translation of âˆ€x Dead(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Loving and Being Loved",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_755.html",
+          "rawReading": [
+            "11.2",
+            "11.3"
+          ],
+          "rawExercises": [
+            "/ex/proof/orInvalid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x exists y Loves(x,y)/to/exists y exists x Loves(x,y)",
+            "/ex/proof/orInvalid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)",
+            "/ex/counter/orValid/from/exists x all y Loves(x,y)/to/all y exists x Loves(x,y)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Somebody Is Not Dead",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_607.html",
+          "rawReading": [],
+          "rawExercises": [
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Everything is not broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1/sentence/Not everything is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Not everything red is broken",
+            "/ex/trans/domain/things/names/-/predicates/Broken1|Red1/sentence/Everything red is not broken"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "Quantifier Equivalences: Â¬âˆ€x Created(x) â«¤âŠ¨ âˆƒx Â¬Created(x)",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_764.html",
+          "rawReading": [
+            "10.1",
+            "10.3",
+            "10.4"
+          ],
+          "rawExercises": [
+            "/ex/create/orInconsistent/qq/âˆ€x Â¬Happy(x)|âˆƒx Happy(x)",
+            "/ex/create/orValid/from/Â¬âˆ€x Happy(x)/to/âˆƒx Happy(x)",
+            "/ex/create/orValid/from/Â¬âˆ€x Happy(x)/to/âˆƒx Â¬Happy(x)",
+            "/ex/create/orValid/from/Â¬âˆƒx Happy(x)/to/âˆ€x Â¬Happy(x)",
+            "/ex/create/orValid/from/Â¬âˆƒx Happy(x)/to/Â¬âˆ€x Â¬Happy(x)",
+            "/ex/create/orValid/from/Â¬âˆƒx Happy(x)/to/Â¬âˆ€x Happy(x)"
+          ]
+        },
+        {
+          "type": "unit",
+          "name": "The End Is Near",
+          "slides": "https://logic-ph133.zoxiy.xyz/units/unit_790.html",
+          "rawReading": [
+            "14.3"
+          ],
+          "rawExercises": [
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))",
+            "/ex/create/qq/exists x exists y exists z (LeftOf(x,y) and LeftOf(y,z))|all x all y (LeftOf(x,y) arrow Larger(x,y))|all x (exists y LeftOf(y,x) arrow not Happy(x))|exists x (exists y Above(y,x) and all z ( exists y Above(y,z) arrow z=x))",
+            "/ex/create/qq/exists x exists y (Tall(x) and all z (Tall(z) arrow z=x) and Wide(y) and all z (Wide(z) arrow z=y) and Happy(x) and Sad(y) and Above(x,y))",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end|Near1/sentence/The end is not near",
+            "/ex/trans/domain/events/names/-/predicates/End1-x-is-an-end/sentence/There is no end",
+            "/ex/trans/domain/events/names/-/predicates/Dead1|King1/sentence/The king is dead",
+            "/ex/trans/domain/events/names/-/predicates/Beautiful1|Dead1|King1/sentence/The beautiful king is dead",
+            "/ex/proof/from/exists x (Yak(x) and all y (Yak(y) arrow x=y))/to/all x all y ((Yak(x) and Yak(y)) arrow x=y)",
+            "/ex/proof/from/exists x all y (Yak(y) <-> x=y)/to/exists x Yak(x)",
+            "/ex/proof/from/exists x Yak(x)|exists x all y (Yak(y) arrow x=y)/to/exists x all y (Yak(y) <-> x=y)"
+          ]
+        }
+      ]
+    }
+  ]
+}

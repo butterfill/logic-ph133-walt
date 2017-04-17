@@ -1,0 +1,137 @@
+---cson
+layout: 'deck_units' 
+title: "There Is Exactly One"
+tags: ['translation']
+description: "Mentions several ways of expressing the idea that there is exactly one creator in our formal language, awFOL."
+depends: ['']
+source: ['']
+duration: 5
+book: []
+exercises: ['14.10--14.12, *14.13']
+exercises_fast: ['11.10, 11.13', '14.2']
+exNormal : [
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is one and only one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one female survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one survivor and she is female'
+  
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
+  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  
+  '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)'
+]
+exFast : [
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is at least one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/Ayesha is the one and only survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor/sentence/There is one and only one survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one female survivor'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Survivor1-x-is-a-survivor|Female1/sentence/There is one and only one survivor and she is female'
+  
+  '/ex/counter/orValid/from/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))/to/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  '/ex/counter/orValid/from/exists x (Pilot(x) and all y (Pilot(y) arrow x=y) and Female(x))/to/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
+  
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and  all y (Pilot(y) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and Female(x) and  all y ((Pilot(y) and Female(y)) arrow x=y))'
+  '/ex/trans/domain/people/names/a=Ayesha/predicates/Pilot1-x-is-a-pilot|Female1/sentence/exists x (Pilot(x) and all y (Pilot(y)  arrow x=y)  and Female(x))'
+  
+  '/ex/proof/from/exists x Zip(x)|exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/counter/from/exists x all y (Zip(y) arrow x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x all y (Zip(y) <-> x=y)/to/exists x (Zip(x) and all y (Zip(y) arrow x=y))'
+  '/ex/proof/from/exists x Zip(x)|not exists x exists y (Zip(x) and Zip(y) and not x=y)/to/exists x all y (Zip(y) <-> x=y)'
+]
+
+---
+
+include ../../../fragments/unit_mixins
+
+
+
++slide
+  .handout There is one creator (at least one, maybe more).
+  .handout \hspace{3mm}  ∃x Creator(x)
+  .handout Ahura Mazda is the one and only creator.
+  .handout \hspace{3mm}  Creator(a) ∧ ∀x( Creator(x) → x=a )
+  .handout All squares are broken.
+  .handout \hspace{3mm}  ∀x( Sqr(x) → Brkn(x) )
+  .handout There is one and only one creator.
+  .handout \hspace{3mm}  ∃y( Creator(y) ∧ ∀x( Creator(x) → x=y ) )
+  .handout \hspace{3mm}  or:
+  .handout \hspace{3mm}  ∃y ∀x( Creator(x) ↔ x=y ) 
+  
+  .preliminaries(style="z-index:-20;position:relative;")
+    p There is one creator 
+      span.slide (at least one, maybe more).
+    p.indent.slide ∃x Creator(x)
+  .slide.nodim.preliminaries
+    p.em-above
+        span.brian-to-exists Ahura Mazda
+        |  is the one and only creator.
+    p.indent
+      span.hide ∃y( 
+      span Creator(
+      span.brian a
+      | ) 
+      span.slide ∧ ∀x( 
+        span.antecedent Creator(x)
+        span  → 
+        span.consequent x=
+          span.brian a
+        |  )
+  //- *note explain what's going on here: we're saying all creators are brian, like all squares are blue
+  .slide
+    div.allsquares.white-box(style="width:260px;position:absolute;top:0px;left:400px;z-index:-10;")
+      p.center All squares are broken.
+      p.center ∀x( 
+        span.antecedent Sqr(x)
+        span  → 
+        span.consequent Brkn(x)
+        span  )
+    +highlight('.antecedent','pink')
+    +highlight('.consequent','blue')
+    dim_('.allsquares')
+    +unhighlight-all('.consequent, .antecedent')
+  .slide.nodim
+    .the-solution(style="padding-bottom:.66em;")
+      p.em-above
+          span.brian-to-exists There is
+          |  one and only one creator.
+      +highlight('.brian-to-exists','yellow')
+      +highlight('.brian','yellow')
+      p.indent.slide.nodim
+        span.step2.existential.bkg-words-highlight-yellow.hide ∃y( 
+        span Creator(
+        span.var-y y
+        span ) ∧ 
+        span.universal ∀x
+        span ( Creator(x) → x=
+        span.var-y y
+        span  ) 
+        span.step2.hide )
+        +highlight('.var-y','yellow')
+        +steps(2)
+  +unhighlight-all_('.brian-to-exists, .brian, .step2, .var-y')
+  +invert('.existential, .universal')
+  .notes Look, two quantifiers.  But not just two quantifiers, one is existential and the other is universal.  Mixed quantifiers!
+  +uninvert('.existential, .universal')
+  .slide.nodim
+    .notes Here's another, shorter way of expressing the same proposition (these are logically equivalent)
+    .clever-alternative
+        p or:
+        p.indent ∃y( ∀x( Creator(x) 
+          span.log-equiv ↔
+          span  x=y ) )
+  +highlight('.log-equiv','lime')
+  +blur2_('.clever-alternative, .preliminaries')
+  +highlight-row('.the-solution','grey')
+  //- exercise to check you've got it
+  .slide
+    p.em-above Ex: There is one and only one female creator.
+    p.slide Ex: There is one and only one creator and she is female.

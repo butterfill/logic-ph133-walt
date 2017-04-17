@@ -1,0 +1,247 @@
+---cson
+layout: 'deck_units' 
+title: "I Met a Philosopher"
+description: "Explains how to express propositions like 'I met a philosopher' by using the existential quantifier together with conjunction."
+tags: ['quantification']
+depends: ['unit_471']
+source: ['ph126 lecture 07']
+duration: 5
+book: ['9.2','9.3','9.5']
+exercises: ['9.1 odd numbers only', '9.2 even numbers only', '9.4', '9.5', '9.8', '9.9', '9.10', '9.12']
+exercises_fast: ['9.8', '9.9', '9.10','9.12','9.13']
+sequence: 440
+exNormal: [
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"green","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">","("]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"yellow","f":["}:","-",")"]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"orange","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+
+  '/ex/trans/domain/5things/names/-/predicates/Circle1|Broken1/sentence/All circles are broken'
+  '/ex/trans/domain/5things/names/-/predicates/Idol1-x-is-an-idol|Dead1/sentence/∀x(Idol(x) → Dead(x))'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/people/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
+  '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))'
+  '/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying'
+    
+]
+# exFast : see unit 507
+exFast: [
+  """/ex/TorF/world/[{"x":4,"y":0,"w":2,"h":2,"n":"","c":"orange","f":["}:","-","("]},{"x":2,"y":0,"w":2,"h":2,"n":"","c":"blue","f":["}:","-",")"]},{"x":0,"y":0,"w":2,"h":2,"n":"","c":"indigo","f":[";",">",")"]}]/qq/all x (Frowning(x) arrow Happy(x))"""
+
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is sad'
+  '/ex/trans/domain/people/names/-/predicates/CanSwim1-x-can-swim|Fish1/sentence/∀x(Fish(x) → CanSwim(x))'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1/sentence/Everyone tall is not sad'
+  '/ex/trans/domain/people/names/-/predicates/Tall1|Sad1|Laughing1/sentence/Everyone tall is sad or laughing'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1/sentence/A tall thing is crying'
+  '/ex/create/qq/exists x Wide(x)|exists x Frowning(x)|exists x (Wide(x) and Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and Frowning(x))'
+  '/ex/create/qq/exists x Wide(x)|exists x not Frowning(x)|exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Wide1|Frowning1/sentence/exists x (Wide(x) and not Frowning(x))'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/A tall person is not crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1|Sad1/sentence/A tall sad person is not crying'
+
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is crying'
+  '/ex/trans/domain/5things/names/-/predicates/Tall1|Crying1|Person1/sentence/No tall person is not crying'
+    
+]
+---
+
+//- move these exercises_fast to later unit: ,'9.16.10-15','9.17.7-15','9.18','9.19'
+
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_501/slide-005.jpeg'})
+  .notes: :t()
+    You may remember the two basic forms of quantified sentences we've been considering so far.
+    These are quite limiting.  What happens if we want to say, not that everything is broken, but that everything of mine is broken.
+    And how could we say, not just that something is broken, but that a red square is broken (say)?
+  +reset
+  //- spacer
+  div(style="margin-top:100px;") &nbsp;
+  .slide
+    .container_12
+      .grid_6
+        .example3
+          .step2.hide
+            p All 
+              span.circles circles
+              span  are 
+              span.broken2 broken.
+          .step3.hide
+            p 
+              span ∀x( 
+              span.circles Circle(x)
+              span   → 
+              span.broken2 Broken(x)
+              span  )
+        .example4
+          .step4.hide
+            p.em-above All 
+              span.idols idols
+              span  are 
+              span.dead dead.
+          .step5.hide
+            p 
+              span ∀x( 
+              span.idols Idol(x)
+              span   → 
+              span.dead Dead(x)
+              span  )
+        .example5
+          .step6.hide
+            p.em-above All 
+              span.who-wander who wander
+              span  are 
+              span.lost lost.
+          .step7.hide
+            p 
+              span ∀x( 
+              span.who-wander Wanderer(x)
+              span   → 
+              span.lost Lost(x)
+              span  )
+      .grid_6
+        .example1
+          p A 
+            span.square square
+            span  is 
+            span.broken broken
+          .slide
+            p Something is 
+              span.square square
+              span  and  
+              span.broken broken
+          .slide 
+            p ∃
+              span.variable x
+              span  ( 
+              span.square Square(
+              span.variable x
+              span ) 
+              span  ∧ 
+              span.broken Broken(
+              span.variable x
+              span )
+              span )
+          +highlight('.square')
+          +highlight('.broken','yellow')
+          .variables
+            +unhighlight_('.square')
+            +unhighlight_('.broken','yellow')
+            +invert('.variable','')
+            .notes These are variables.  I have a terrible conscience about variables because I've been talking about them without explaining what they are.
+            
+        +blur2('.example1')
+        .example2
+          p.slide A red square is broken
+          p.slide Something is red and square and broken
+          p.slide ∃x ( 
+            span.red Red(x) 
+            span  ∧ 
+            span.square2 Square(x) 
+            span  ∧ 
+            span.broken2 Broken(x)
+            span  )
+          +highlight('.red','teal')
+    +blur2('.example2')
+    +show('.step2')
+    +show('.step3')
+    +highlight('.circles')
+    +highlight('.broken2','yellow')
+    +blur2_('.example3')
+    +show('.step4')
+    +show('.step5')
+    +highlight('.idols')
+    +highlight('.dead', 'yellow')
+    +blur2_('.example4')
+    +show('.step6')
+    +show('.step7')
+    +highlight('.who-wander')
+    +highlight('.lost', 'yellow')
+    
+
++slide({bkg:'unit_501/slide-006.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-007.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-008.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-009.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-010.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-011.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-012.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-013.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-014.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-015.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-016.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-017.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-018.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-019.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-020.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-021.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-022.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-023.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-024.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-025.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-026.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-027.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-028.jpeg'})
+  .notes 
+
++slide({bkg:'unit_501/slide-029.jpeg'})
+  .notes 
+

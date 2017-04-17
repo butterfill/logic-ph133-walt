@@ -1,0 +1,178 @@
+---cson
+layout: 'deck_units' 
+title: 'Translation with Quantifiers'
+tags: ['translation']
+description: "Discusses how to translate 'Some persuasive arguments are not valid' and 'All quadrumanous discordians weep and wail except Gillian Deleude' into first-order logic."
+depends: ['unit_503']
+book: ['9.5','9.6']
+sequence: 600
+exercises_fast:['9.12-–9.13']
+exercises: ['9.4–-9.5', '9.8–-9.9']
+exNormal: [
+  '/ex/create/qq/exists x (Tall(x) and Sad(x))'
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))'
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x) and Red(x))'
+  
+  '/ex/create/qq/Tall(a)|exists x LeftOf(x,a)'
+  '/ex/create/qq/Tall(a)|exists x (Tall(x) and LeftOf(x,a))'
+  '/ex/create/qq/Tall(a)|exists x Laughing(x)|exists x (Laughing(x) and Tall(x) and LeftOf(x,a))'
+  
+  '/ex/trans/domain/people/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
+  '/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
+  '/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying'
+  '/ex/trans/domain/people/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken'
+  
+  '/ex/create/qq/some x Tall(x)|all x (Tall(x) arrow Sad(x))'
+  '/ex/create/qq/some x (Tall(x) and Sad(x))|some x (Tall(x) and not Sad(x))'
+  '/ex/create/qq/some x Tall(x)|not all x (Tall(x) arrow Sad(x))'
+  
+  '/ex/create/qq/exists x Tall(x)'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))'
+    
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying'
+
+  '/ex/trans/domain/things/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken'
+  
+]
+exFast: [
+  # Includes some exercises from unit 245 (not done in fast lectures)
+  
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and Crying(x))'
+
+  '/ex/create/qq/exists x LeftOf(x,a)'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))'
+  '/ex/create/qq/exists x LeftOf(x,a)|all x (LeftOf(x,a) arrow Sad(x))|exists x (LeftOf(x,a) and Tall(x))|exists x (LeftOf(x,a) and not Tall(x))|all x (LeftOf(x,a) arrow LargerThan(x,a))'
+  
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1/sentence/exists x (Sad(x) and Red(x))'
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is broken'
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1|Crying1/sentence/A red, sad thing is broken and crying'
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/A red, sad thing is not broken'
+  
+  '/ex/create/qq/exists x (Tall(x) and Sad(x) and not Crying(x))'
+  '/ex/create/qq/not (exists x (Tall(x) and Sad(x) and Crying(x)))'
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/No red, sad thing is broken'
+  
+  '/ex/create/qq/exists x (Tall(x) and Sad(x))|exists x (Tall(x) and not Sad(x))|exists x (not Tall(x) and Sad(x))'
+  
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|exists(x) Crying(x)|all x (Tall(x) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x ((Tall(x) and Sad(x)) arrow Crying(x))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|all x (Tall(x) arrow (Red(x) and Crying(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x not Crying(x)|not (all x (Tall(x) arrow (Red(x) and Crying(x))))'
+
+  '/ex/create/qq/exists x RightOf(x,a)'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x))'
+  '/ex/create/qq/exists x RightOf(x,a)|exists x (RightOf(x,a) and Tall(x) and Happy(x) and Frowning(x) and LeftOf(x,b))'
+  
+  '/ex/trans/domain/things/names/-/predicates/Red1|Sad1|Broken1/sentence/All red things are broken'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1/sentence/All tall sad things are broken'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall things are broken and crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/All tall sad things are broken or crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall things are broken and crying'
+  '/ex/trans/domain/things/names/-/predicates/Tall1|Sad1|Broken1|Crying1/sentence/No tall sad things are broken or crying'
+
+  '/ex/trans/domain/things/names/a=Ayesha/predicates/Red1|Sad1|Broken1/sentence/All red things except Ayesha are broken'  
+
+  '/ex/create/qq/exists x Tall(x)|all x (Tall(x) arrow Happy(x))|not (all x (Tall(x) and Happy(x)))'
+  '/ex/create/qq/exists x Tall(x)|exists x (Tall(x) arrow Happy(x))|not (exists x (Tall(x) and Happy(x)))'
+
+  '/ex/trans/domain/things/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y/sentence/Something is left of Ayesha'
+  '/ex/trans/domain/things/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y/sentence/Something is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/things/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1/sentence/Something tall is left of Ayesha and right of Beatrice'
+  '/ex/trans/domain/things/names/a=Ayesha|b=Beatrice/predicates/LeftOf2-x-is-left-of-y|RightOf2-x-is-right-of-y|Tall1|Sad1/sentence/Something tall and sad is left of Ayesha and right of Beatrice'
+]
+---
+
+include ../../../fragments/slide_mixins
+
+//- *todo doesn't the last one imply that Gillian Deleude does not weep and wail, and that she is a French discordian?
+//-   if so, the translation is inadequate
+
+
+.slide#unit_507
+  .handout \begin{minipage}{\columnwidth}
+  .handout All discordians weep:
+  .handout ∀x( Dscrdn(x) → Wps(x) )
+  .handout \end{minipage}
+  
+  .handout \begin{minipage}{\columnwidth}
+  .handout All \textbf{quadrumanous} discordians weep:
+  .handout ∀x( ( \textbf{Quadr(x) ∧} Dscrdn(x) ) → Wps(x) )
+  .handout \end{minipage}
+
+  .handout \begin{minipage}{\columnwidth}
+  .handout All quadrumanous discordians weep \textbf{and wail}:
+  .handout ∀x( ( Quadr(x) ∧ Dscrdn(x) ) → ( Wps(x) \textbf{ ∧ Wls(x)} ) )
+  .handout \end{minipage}
+
+  .handout \begin{minipage}{\columnwidth}
+  .handout All quadrumanous discordians weep and wail \textbf{except Gillian Deleude}:
+  .handout ∀x( ( Quadr(x) ∧ Dscrdn(x) \textbf{∧ ¬(x=a)} ) → ( Wps(x) ∧ Wls(x) ) )
+  .handout \end{minipage}
+  
+  .container_12
+    .grid_12
+      .words
+        .existential_translation
+          p Some 
+            span.step5.hide
+              span.bkg-words-highlight-yellow persuasive 
+              span and 
+            span.step3.hide.bkg-words-highlight-red useful 
+            span arguments are not valid.
+          p.step2.hide ∃x(
+            span.step6.hide
+              span.bkg-words-highlight-yellow Persuasive(x) 
+              span ∧ 
+            span.step4.hide
+              span.bkg-words-highlight-red Useful(x) 
+              span ∧  
+            span Argument(x) ∧ ¬Valid(x))
+          mixin steps(6)
+        .slide.anim-addclass(data-what=".existential_translation",data-class="dim")
+        .slide.nodim
+          p.em-above All 
+            span.universal-who discordians 
+            span.universal-what weep.
+          p.slide.nodim ∀x( 
+            span.universal-who Dscrdn(x) 
+            span → 
+            span.universal-what Wps(x) 
+            span )
+          .slide.anim-addclass(data-what=".universal-who",data-class="bkg-words-highlight-blue")
+          .slide.anim-addclass(data-what=".universal-what",data-class="bkg-words-highlight-pink")
+        .slide
+          p.em-above All 
+            span.bkg-words-highlight-yellow quadrumanous 
+            span discordians weep. 
+          p.slide ∀x( (
+            span.bkg-words-highlight-yellow Quadr(x)
+            span ∧ Dscrdn(x) ) →  Wps(x) )
+        .slide
+          p.em-above All quadrumanous discordians weep 
+            span.bkg-words-highlight-yellow and wail.
+          p.slide ∀x( ( Quadr(x) ∧ Dscrdn(x) ) → 
+            span.bkg-words-highlight-yellow ( 
+            span Wps(x) 
+            span.bkg-words-highlight-yellow ∧ Wls(x) ) 
+            span )
+        .slide
+          p.em-above All quadrumanous discordians weep and wail 
+            span.bkg-words-highlight-yellow except Gillian Deleude.
+          p.slide ∀x( ( Quadr(x) ∧ Dscrdn(x) 
+            span.bkg-words-highlight-yellow ∧ ¬(x=a) 
+            span ) →  ( Wps(x) ∧ Wls(x) ) )
+            
+      

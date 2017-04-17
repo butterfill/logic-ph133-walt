@@ -1,0 +1,74 @@
+---
+layout: 'default2'
+title: 'Logic (PH133)'
+subtitle: 'Lecture 2'
+units: []
+lecture_date: '2015/04/23'
+---
+
+include ../../fragments/lecture_mixins
+include ../../fragments/unit_mixins
+
+- var images = get_images('bees')
+
+
+
+
++title_slide({document:document, images:images})
+
+//- recap validity
+//- removed -- necessary?
+//- +insert_unit({unit:'05', title_slide:false, images:images})
+
+//- recap connectives via formalising pigs argument
++insert_unit({unit:'135', title_slide:false, images:images})
+
+//- reply to student email (keep anonymous)
+//- +insert_unit({unit:'073', title_slide:false, images:images})
+
+
+//- unit: logically valid with truth tables
++insert_unit({unit:'14', title_slide:false, images:images})
+
+//- why logic
++insert_unit({unit:'011', title_slide:true, images:images})
+
+
+
+
+//- complex truth tables
+//- done in lecture 01 in 2012-3 but not in 2013-4
++insert_unit({unit:'60', title_slide:true, images:images})
+//- complex truth tables plus how to order reference columns
++insert_unit({unit:'09', title_slide:false, images:images})
+
+//- cancel lecture
+//- section.slide
+//- p.middle.center No lecture on Tuesday 30th April.
+
+
+//- what to read: which sections of the text book
+section.slide#what_to_read
+  img.bkg(src='/img/what_to_read.jpeg')
+
+//- postsecret quiz: logically valid arguments
+- each d in getCollection("documents").findAll({url:'/quizes/postsecret_01.html'},[{year:-1,sort_order:1}]).toJSON()
+  mixin render_unit(d)
+
+
+//- unit: logical validity is not what you think it is
++insert_unit({unit:'162', title_slide:false, images:images})
++insert_unit({unit:'160', title_slide:false, images:images})
+
+
+//- cancel lecture
+//- section.slide
+//- p.middle.center No lecture on Tuesday 30th April.
+
+//- unit: formal proof (skipped in 2014-5)
++insert_unit({unit:'211', title_slide:true, images:images})
+//- 
+  //- not done in 2013-4 or 2014-5
+  +insert_unit({unit:'213', title_slide:false, images:images})
+  +insert_unit({unit:'21', title_slide:false, images:images})
+

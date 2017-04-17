@@ -1,0 +1,179 @@
+---cson
+layout: 'deck_units' 
+title: "Complex Truth Tables"
+description: "Illustrates how to construct complex truth-tables with an example, the truth-table for (P and Q) or R.  Also describes how to order the reference columns."
+tags: ['truth-tables']
+depends: ['071']
+source: ['ph126 fastlecture 01', 'ph133 lecture 02']
+sequence: 230
+book: ['3.3','3.5']
+exercises_fast: ['3.14, 3.15']
+exercises: ['3.12, 3.13', '4.4-4.7', '4.12-14']
+exNormal: [
+  '/ex/tt/qq/(A and B) or C'
+  '/ex/tt/qq/A and (B or C)'
+  '/ex/create/qq/(Happy(a) and Happy(b)) or Happy(c)|not (Happy(a) and (Happy(b) or Happy(c)))'
+  '/ex/tt/qq/not (A and B)'
+  '/ex/tt/qq/A|not not A'
+  '/ex/trans/domain/Tobin/names/a=Tobin/predicates/Ugly1/sentence/not not Ugly(a)'
+  '/ex/tt/qq/not (A or B)|not A or not B'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/not (Ugly(a) or Inept(b))'
+  '/ex/tt/qq/not (A or B)|not A and not B'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musician1-x-is-a-musician/sentence/It’s false that Tobin and Suzi are both musicians'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Ugly1|Inept1/sentence/It’s false that Tobin is ugly and Suzi inept'
+  '/ex/trans/domain/Tobin|Suzi/names/a=Tobin|b=Suzi/predicates/Musical1/sentence/Suzi isn’t musical and it’s false that Tobin isn’t musical'
+  '/ex/tt/qq/not (not A and not B)|(A and B)'
+  '/ex/create/from/not (not Happy(a) and not Happy(b))/to/(Happy(a) and Happy(b))'
+]
+exFast: [
+  '/ex/tt/qq/(A and B) or C'
+  '/ex/tt/qq/A and (B or C)'
+  '/ex/create/from/(Happy(a) and Happy(b)) or Happy(c)/to/Happy(a) and (Happy(b) or Happy(c))'
+  '/ex/tt/qq/A|not not A'
+  '/ex/create/orValid/from/Happy(a)/to/not not Happy(a)'
+  '/ex/tt/qq/not (A or B)|not A and not B'
+  '/ex/tt/qq/not (A and not B)|not A or B'
+  '/ex/create/orInconsistent/qq/not (Sad(a) and not Sad(b))|not Sad(a) or Sad(b)'
+  '/ex/tt/qq/not (not A and B)|(A and not B)'
+  '/ex/create/orValid/from/not (not Happy(a) and Happy(b))/to/(Happy(a) and not Happy(b))'
+]
+---
+
+include ../../../fragments/unit_mixins
+
+
++slide({bkg:'unit_09/slide-034.jpeg'})
+  //- handout
+  .img.handout(data-src='img/how_to_write_truth_tables.png')
+  .handout \begin{minipage}{\columnwidth}
+  .handout Complex truth table example:
+  .img.handout(data-src='img/tt_p_and_q_or_r.png')
+  .handout \end{minipage}
+  .notes 
+
++slide({bkg:'unit_09/slide-035.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-036.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-037.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-038.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-039.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-040.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-041.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-042.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-043.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-086.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-087.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-088.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-089.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-090.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-091.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-092.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-093.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-094.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-095.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-096.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-097.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-098.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-099.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-100.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-101.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-102.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-103.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-104.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-105.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-106.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-107.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-108.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-109.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-110.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-111.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-112.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-113.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-114.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-115.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-116.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-162.jpeg'})
+  .notes 
+
++slide({bkg:'unit_09/slide-163.jpeg'})
+  .notes 
+

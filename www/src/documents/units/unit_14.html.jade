@@ -1,0 +1,175 @@
+---cson
+layout: 'deck_units' 
+title: "Logical Validity and Truth Tables"
+description: "Illustrates the use of truth tables to determine logical validity."
+tags: ['truth-tables']
+depends: []
+source: ['ph126 fastlecture 01']
+sequence: 150
+book: ['4.3']
+exercises: ['5.1-5.4']
+exNormal: [
+  '/ex/tt/from/A or B|not A/to/B'
+  '/ex/tt/from/A or B|B/to/not A'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Happy1|Sad1/sentence/not Happy(a) or not Happy(b)'
+  '/ex/tt/from/not A or not B|A/to/not B'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Happy1|Sad1/sentence/not (Happy(a) or Happy(b))'
+  
+  '/ex/tt/from/not (A or B)/to/not A'
+  '/ex/tt/from/not (A and B)/to/not A'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Laughing1/sentence/It’s not true that either Ayesha is frowning or Beatrice is laughing'
+  '/ex/trans/domain/people/names/a=Ayesha|b=Beatrice/predicates/Frowning1|Laughing1/sentence/Ayesha isn’t frowning or Beatrice isn’t laughing'
+]
+exFast: [
+  '/ex/tt/from/A or B|not A/to/B'
+  '/ex/tt/from/not (A or B)/to/not A'
+  '/ex/tt/from/not (A and B)/to/not A'
+]
+---
+
+include ../../../fragments/unit_mixins
+
+//-  TODO: extend to add another example where you specify which rows are counterexamples!
+
+//- the slides
++slide_middle
+  p.center We can use truth tables to establish that 
+    br
+    | some arguments are logically valid
+
+
+  //- handout
+  .handout \begin{minipage}{\columnwidth}
+  .handout Truth tables can be used to show that an argument is valid.  To illustrate ...
+  .img.handout(data-src='img/unit_14_example.png')
+  .handout \end{minipage}
+
+  .handout \begin{minipage}{\columnwidth}
+  .handout To establish that an argument is valid:
+  .handout \begin{enumerate}
+  .handout \item Create truth tables for each premise and the conclusion.
+  .handout \item Check whether there is a row of the truth table where all premises are true and the conclusion is false.
+  .handout \item If not, the argument is valid.
+  .handout \end{enumerate}
+  .handout \end{minipage}
+
++slide({bkg:'unit_14/slide-066.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-067.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-068.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-069.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-070.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-071.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-072.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-073.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-074.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-075.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-076.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-077.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-078.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-079.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-080.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-081.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-082.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-083.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-084.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-085.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-086.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-087.jpeg'})
+  .notes Don’t need to go further, already have a false premise.  So this won’t be a situation in which the premises are true and the conclusion false.
+
++slide({bkg:'unit_14/slide-088.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-089.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-090.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-091.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-092.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-093.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-094.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-095.jpeg'})
+  .notes This situation is different from the other two: the premises are true in this possible situation, so we had to think about whether the conclusion is true.
+  .notes But, as you can see, the conclusion is also true.  So this is no counterexample.
+
++slide({bkg:'unit_14/slide-096.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-097.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-098.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-099.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-100.jpeg'})
+  .notes So if someone asked you to show that this argument is valid using truth tables, what would you do?
+  .notes First, create truth tables for each premise and for the conclusion.
+  .notes Next, check whether there is any row where the premises are true and the conclusion false.
+  .notes If not, you can write this:
+  .notes By inspecting the truth table, there is no row where the premises are true and the conclusion false; therefore, the argument is logically valid.
+
+
++slide({bkg:'unit_14/slide-101.jpeg'})
+  .notes 
+
++slide({bkg:'unit_14/slide-102.jpeg'})
+  .notes When you're doing truth tables there's a temptation to race through them.
+
++slide({bkg:'unit_14/slide-103.jpeg'})
+  .notes But you shouldn't do that.  Be the little snail.
+

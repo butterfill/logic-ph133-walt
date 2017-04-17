@@ -1,0 +1,174 @@
+---cson
+layout: 'deck_units' 
+title: "Two Things Are Broken"
+description: "Explains how to translate sentences involving number into awFOL using quantifiers and identity."
+tags: ['quantification','semantics']
+depends: ['740']
+source: ['ph126 fastlecture 05']
+duration: 10
+book: ['14.1']
+sequence: 710
+exNormal : [
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)'
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)|all x (exists y Below(x,y) arrow Sad(x))'
+  
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y))/to/exists x exists y (Happy(x) and Happy(y) and not x=y)'
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y) and not x=y)/to/exists x exists y (Happy(x) and Happy(y))'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/Something is crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y (Sad(x) and Sad(y) and not x=y)'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y exists z (Sad(x) and Sad(y) and Sad(z) and not x=y and not y=z and not x=z)'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are not crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/It is not true that at least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At most one thing is crying'
+]
+exFast : [
+  '/ex/create/qq/exists x exists y (not x=y)|all x (not x=a arrow Adjacent(x,a))|all x (Adjacent(x,a) arrow x=b)|exists x exists y Below(x,y)|all x (exists y Below(x,y) arrow Sad(x))'
+
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y))/to/exists x exists y (Happy(x) and Happy(y) and not x=y)'
+  '/ex/create/orValid/from/exists x exists y (Happy(x) and Happy(y) and not x=y)/to/exists x exists y (Happy(x) and Happy(y))'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/Something is crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y (Sad(x) and Sad(y) and not x=y)'
+  '/ex/trans/domain/people/names/-/predicates/Sad1/sentence/exists x exists y exists z (Sad(x) and Sad(y) and Sad(z) and not x=y and not y=z and not x=z)'
+  
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At least two things are not crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/It is not true that at least two things are crying'
+  '/ex/trans/domain/people/names/-/predicates/Crying1/sentence/At most one thing is crying'
+]
+---
+
+//- TODO: start with discusssion of identity in sentences like all x (not x=a arrow Adjacent(x,a)) ...
+
+include ../../../fragments/unit_mixins
+
++slide({bkg:'unit_470/slide-132.jpeg'})
+  .notes 
+  //- handout
+  .handout To translate sentences involving number into awFOL, use identity.  For example,
+  .handout `Two things are broken' might be translated as:
+  .handout ∃x ∃y ( Broken(x) ∧ Broken(y) ∧ ¬(x=y) )
+  
+
++slide({bkg:'unit_470/slide-133.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-134.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-135.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-136.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-137.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-138.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-139.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-140.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-141.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-142.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-143.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-144.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-145.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-146.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-147.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-148.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-149.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-150.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-151.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-152.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-153.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-154.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-155.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-156.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-157.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-158.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-159.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-160.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-161.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-162.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-163.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-164.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-165.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-166.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-167.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-168.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-169.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-170.jpeg'})
+  .notes 
+
++slide({bkg:'unit_470/slide-171.jpeg'})
+  .notes 
+
